@@ -19,12 +19,7 @@ void Console::start()
         ArrayOfNumber arr(size);
         ScanFile().Recording(arr, size, name_file);
 
-        auto begin = std::chrono::steady_clock::now();
         _sort->SortArr(arr, size);
-        auto end = std::chrono::steady_clock::now();
-
-        auto elapsed_ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-        std::cout << "The time: " << elapsed_ms.count() << " ms" << std::endl;
 
         PrintFile().outFile(arr, size);
     } catch (const std::exception& exept) 

@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <chrono>
 #include "Sorting.h"
 #include "ShapeFactory.h"
 #include "ScanFile.h"
